@@ -1,0 +1,10 @@
+
+private Class entity = new GetGenericClass().getGenericClass(this.getClass());
+
+public class GetGenericClass {
+     public Class getGenericClass(Class class1) {
+    	 ParameterizedType pType=(ParameterizedType)class1.getGenericSuperclass();
+ 	     Class entity=(Class)pType.getActualTypeArguments()[0];
+ 	     return entity;
+	}
+}
